@@ -7,9 +7,10 @@ async function run() {
     core.debug("A debug message from core");
     try {
         const version = core.getInput('version') || 'latest';
+        const scriptFile =  `'${__dirname}/install-aws.sh'`
         console.log(`Installing MyCLI version: ${version}...`);
 
-        execSync(`curl -fsSL https://cli.example.com/install.sh | sh`, { stdio: 'inherit' });
+        execSync(`bash ${scriptFile}`, { stdio: 'inherit' });
 
         console.log("MyCLI installed successfully.");
     } catch(error) {

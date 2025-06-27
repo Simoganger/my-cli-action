@@ -16,12 +16,12 @@ jobs:
             - name: Install MyCLI
               uses: ./.github/actions/my-cli-action
               with:
-                version: '1.2.3'
+                version: '2.0.30'
             
             - name: Verify CLI Installation
               run: | 
                 echo "Checking MyCLI version ..."
-                mycli --version
+                /usr/local/bin/aws --version
             
             - name: Cache MyCLI
               uses: actions/cache@v4
