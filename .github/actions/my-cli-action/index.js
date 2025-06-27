@@ -3,7 +3,7 @@ const { execSync } = require('child_process')
 
 
 async function run() {
-    core.log("An info message from core");
+    core.info("An info message from core");
     core.debug("A debug message from core");
     try {
         const version = core.getInput('version') || 'latest';
