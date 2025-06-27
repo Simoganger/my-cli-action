@@ -3,7 +3,7 @@ name: Test MyCLI Setup
 on:
     push:
         branches:
-            - main
+            - master
             - feature/*
 
 jobs:
